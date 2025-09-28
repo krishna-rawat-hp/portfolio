@@ -1,9 +1,9 @@
 {
   "name": "my-portfolio",
+  "homepage": "https://krishna-rawat-hp.github.io/portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://krishna-rawat-hp.github.io/my-portfolio",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
