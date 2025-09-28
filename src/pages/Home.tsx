@@ -4,6 +4,7 @@ import Hero from "../sections/Hero";
 import About from "../sections/About";
 import Projects from "../sections/Projects";
 import Contact from "../sections/Contact";
+import DownloadResume from "../components/DownloadResume";
 
 const Home: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
         <About />
         <Projects />
         <Contact />
+        <DownloadResume />
       </main>
     </div>
   );

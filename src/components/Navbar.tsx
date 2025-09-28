@@ -20,6 +20,16 @@ const Navbar: React.FC = () => {
             Contact
           </a>
         </li>
+        <li>
+          <a
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            Resume
+          </a>
+        </li>
       </ul>
     </nav>
   );
