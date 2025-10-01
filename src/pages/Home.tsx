@@ -4,6 +4,7 @@ import Hero from "../sections/Hero";
 import About from "../sections/About";
 import Projects from "../sections/Projects";
 import Contact from "../sections/Contact";
+import Learn from "../sections/Learn";
 import DownloadResume from "../components/DownloadResume";
 
 const Home: React.FC = () => {
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
         <Hero />
         <About />
         <Projects />
+        <Learn />
         <Contact />
         <DownloadResume />
       </main>
