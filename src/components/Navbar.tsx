@@ -1,24 +1,63 @@
 import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar: React.FC = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const scrollToSection = (sectionId: string) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      // Wait for navigation to complete before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <nav className="fixed top-0 left-0 w-full flex justify-between p-6 text-white z-50">
-      <div className="text-xl font-bold">Krishna Kant Rawat</div>
+      <button
+        onClick={() => scrollToSection("hero")}
+        className="text-xl font-bold hover:text-blue-400 transition-colors duration-300"
+      >
+        Krishna Kant Rawat
+      </button>
       <ul className="flex gap-6">
         <li>
-          <a href="#about" className="hover:underline">
+          <button
+            onClick={() => scrollToSection("about")}
+            className="hover:underline"
+          >
             About
-          </a>
+          </button>
         </li>
         <li>
-          <a href="#projects" className="hover:underline">
+          <button
+            onClick={() => scrollToSection("projects")}
+            className="hover:underline"
+          >
             Projects
-          </a>
+          </button>
         </li>
         <li>
-          <a href="#contact" className="hover:underline">
+          <button
+            onClick={() => scrollToSection("learn")}
+            className="hover:underline"
+          >
+            Learn
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="hover:underline"
+          >
             Contact
-          </a>
+          </button>
         </li>
         <li>
           <a
